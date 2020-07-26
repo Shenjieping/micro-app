@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <p>hello world</p>
+    <div id="shadow"></div>
+  </div>
+  <script>
+    let shadow = document.getElementById('shadow');
+    let shadowDom = shadow.attachShadow({mode: 'closed'}) // 如果设置为 closed 则外界无法访问，如果设置为 open ，则外界可以访问
+    let pElm = document.createElement('p');
+    pElm.innerHTML = 'hello shenjp';
+
+    let styleElm = document.createElement('style');
+    styleElm.textContent = `
+      p {
+        color: red;
+      }
+    `; // 只会对内部的p标签生效，对外面没有影响
+    shadowDom.appendChild(styleElm);
+    shadowDom.appendChild(pElm);
+
+    // 如果将元素移动到body上去了，上面的样式就控制不到了
+    // document.body.appendChild(pElm);
+  </script>
+</body>
+</html>
