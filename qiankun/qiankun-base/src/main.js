@@ -21,6 +21,13 @@ const apps = [
     entry: 'http://localhost:20000/',
     container: '#react',
     activeRule: '/react'
+  },
+  {
+    name: 'jqApp',
+    entry: 'http://localhost:5501/qiankun/qiankun-jq/',
+    container: '#jq',
+    activeRule: '/jq',
+    props: {a: 1} // 父应用向子应用传递参数
   }
 ];
 

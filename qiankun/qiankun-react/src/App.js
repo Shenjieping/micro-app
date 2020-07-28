@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter basename="/react">
-      <Link to="/">首页</Link>
+      <Link to="/">首页</Link> | 
       <Link to="/about">关于页面</Link>
       <Route path="/" exact render={() => (
         <div className="App">
