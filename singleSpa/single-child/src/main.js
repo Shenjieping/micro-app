@@ -33,9 +33,9 @@ if(!window.singleSpaNavigate){
 }
 
 // single规定的协议，父应用会调用这些方法
-export const bootstrap = vueLifeCycle.bootstrap;
-export const mount = vueLifeCycle.mount;
-export const unmount = vueLifeCycle.unmount;
+export const bootstrap = vueLifeCycle.bootstrap; // 加载前调用
+export const mount = vueLifeCycle.mount; // 挂载子应用调用
+export const unmount = vueLifeCycle.unmount; // 卸载子应用调用
 // 这样做还有一个严重的问题，子应用无法启动了？？
 
 /* 

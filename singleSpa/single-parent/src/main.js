@@ -20,8 +20,9 @@ registerApplication(
   async () => {
     console.log('加载模块');
     // 加载脚本
-    await loadScript(`http://localhost:10000/js/chunk-vendors.js`)
-    await loadScript(`http://localhost:10000/js/app.js`)
+    await loadScript(`http://localhost:10000/js/chunk-vendors.js`);
+    await loadScript(`http://localhost:10000/js/app.js`);
+    await loadScript(`http://localhost:10000/js/about.js`);
     // 这里需要要返回 bootstrap/mount/unmount
     return window.singleVue
   },
